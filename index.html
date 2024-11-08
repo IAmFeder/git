@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamentela di Novembre</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            transition: transform 0.3s ease;
+        }
+
+        h1 {
+            color: #f39c12;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            font-weight: 400;
+            transition: font-size 0.3s ease, color 0.3s ease;
+            text-align: left;
+        }
+
+        .btn {
+            background-color: #e67e22;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+        }
+
+        .highlight {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        .shocked {
+            transform: scale(1.05);
+            animation: shake 0.3s ease-in-out infinite alternate;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lamentela del Prof. Rossi</h1>
+        <p id="lettera">
+            Cari studenti,  
+            <br><br>
+            Devo essere sincero: sono davvero PREOCCUPATO.  
+            <br><br>
+            Come mai non vi siete presentati alla lezione di GitHub questa settimana? Non è una domanda facile da rispondere, lo so. Ma la realtà è che il vostro comportamento è sconfortante, quasi come se non vi importasse davvero del vostro futuro. È così difficile seguire una lezione che potrebbe veramente aiutarvi?  
+            <br><br>
+            A dire il vero, vi avevo avvertito più volte di quanto fosse IMPORTANTE avere una buona padronanza di strumenti come GitHub. Ma sembra che, invece di investire nel vostro apprendimento, abbiate scelto di... che so, forse stare a guardare video di gattini su YouTube?  
+            <br><br>
+            Mi chiedo sinceramente: come pensate di affrontare il mondo fuori da queste mura scolastiche con questo atteggiamento? Non sarà certo con questa "dedizione" che conquisterete un posto nel futuro.  
+            <br><br>
+            Non posso credere che non vediate quanto grave sia tutto questo. Che cosa vi è sfuggito? C'è qualcuno tra voi che davvero crede che il lavoro arriverà semplicemente per merito del diploma? Vi invito a riflettere, anche se temo che non serva a nulla.  
+            <br><br>
+            Comunque, chi sono io per giudicare... Evidentemente avete deciso che studiare non è necessario, giusto? Mi chiedo se vi sia mai passato per la testa che questo comportamento potrebbe costarvi molto più di una lezione persa. Ma, dopotutto, chi sono io per fare prediche...  
+            <br><br>
+            Cordiali saluti (con una punta di sconforto),  
+            Prof. Rossi
+        </p>
+        <button class="btn" onclick="ingrandisciTesto()">Ingrandisci lamentela</button>
+    </div>
+
+    <script>
+        function ingrandisciTesto() {
+            var lettera = document.getElementById("lettera");
+            var currentSize = window.getComputedStyle(lettera).fontSize;
+            var newSize = parseFloat(currentSize) * 1.5; // Aumenta la dimensione del 50%
+            lettera.style.fontSize = newSize + "px";
+            lettera.classList.add("shocked"); // Aggiungi l'animazione per la scossa
+        }
+    </script>
+
+</body>
+</html>
